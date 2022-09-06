@@ -32,6 +32,11 @@ Dere blir også kjent med Cloud 9 utviklingsmiljøet dere skal bruke videre.
 
 ### Sjekk ut Cloud 9 miljøet ditt i AWS og bli kjent med det
 
+```text
+OBS! Cloud 9 lagrer ikke dokumenter automatisk! Du må selv gjøre ctrl+s i editoren etter du har gjort
+emdringer.
+```
+
 * URL for innlogging er https://244530008913.signin.aws.amazon.com/console
 * Brukernavnet og passordet er gitt i klasserommet
 
@@ -44,6 +49,7 @@ Dere blir også kjent med Cloud 9 utviklingsmiljøet dere skal bruke videre.
 * Velg "Open IDE"
 
 Du må nå vente litt mens Cloud 9 starter
+@
 
 * Hvis du velger "9" ikonet på øverst til venstre i hovedmenyen vil du se "AWS Explorer". Naviger gjerne litt rundt I AWS Miljøet for å bli kjent.
 * Blir kjent med IDE, naviger rundt.
@@ -137,7 +143,8 @@ Når du ikke får noe output fra terminalen etter CURL kommandoen har requesten 
 
 ## Lag en GitHub Actions workflow
 Bruk  Cloud 9 til å lage to mapper og en fil som heter ````.github/workflows/main.yml```` under rotmappen til repositoriet du har klonet.
-
+NB!
+Husk å trykke ctrl+s etter du har laget denne filen i cloud 9, hvis ikke vil du sjekke inn en tom fil, og din workflow vil ikke fungere
 ```yaml
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
@@ -161,9 +168,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 ```
+* OBS! Hvis du senere ikke finner igjen denne filen, er det fordi Cloud 9 default skjuler filer og mapper som begynner på ". Hvis det skjer, velg "tannhjulet" øverst til høyre i fil-explorer, og velg "show hidden files"
 
-
-Dette er en vekdig enkel *workflow* med en *job* som har en rekke *steps*. Koden sjekkes ut. JDK11 konfigureres,
+* Dette er en vekdig enkel *workflow* med en *job* som har en rekke *steps*. Koden sjekkes ut. JDK11 konfigureres,
 Maven lager en installasjonspakke.
 
 Commit og push til ditt repo. 
