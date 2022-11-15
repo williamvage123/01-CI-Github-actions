@@ -62,7 +62,7 @@ Start en ny terminal i Cloud 9 ved å trykke (+) symbolet på tabbene
 Kjør denne kommandoen for å verifisere at Java 11 er installert
 
 ```shell
-java -version
+java --version
 ```
 Du skal få 
 ```
@@ -82,7 +82,8 @@ sudo yum install -y apache-maven
 
 ### Lag et Access Token for GitHub
 
-Når du skal autentisere deg mot din GitHub konto fra Cloud 9 trenger du et access token.  Gå til  https://github.com/settings/tokens og lag et nytt. 
+Når du skal autentisere deg mot din GitHub konto fra Cloud 9 trenger du et access token.  Gå til  https://github.com/settings/tokens og lag et nytt.
+(Velg "Classic" token, ikke "Beta")
 
 ![Alt text](img/generate.png  "a title")
 
@@ -129,7 +130,7 @@ http://localhost:8080/account/1/transfer/2 \
 }'
 ```
 
-Husk at dette er applikasjonen "Shakybank", en 500 Internal server error er svært vanlig :-)
+Husk at dette er applikasjonen "Shakybank", en 500 Internal server error er *svært vanlig* :-)
 ```json
 {
   "timestamp": "2022-04-04T21:34:45.542+00:00",
@@ -208,10 +209,11 @@ Ved å konfigurerere main som en beskyttet branch, og ved å bruke "status sjekk
 - Velg *main* Som branch
 - Velg ```require a pull request before merging```
 - Velg ````Require status check to pass before merging````
+- Velg ```Do not allow bypassing the above settings```
 - I søkefeltet skriv inn teksten *build* som skal la deg velge "GitHub Actions". 
 
 * Nå kan vi ikke Merge en pull request inn i Main uten at status sjekken er i orden. Det betyr at vår Workflow har kjørt OK. 
-* Ingen i teamet kan heller "snike seg unna" denne sjekken ved å comitte kode rett på main branch.
+* Ingen i teamet kan nå "snike seg unna" denne sjekken ved å comitte kode rett på main branch, selv ikke admin
 * En bra start!
 
 ## Test å brekke koden 
