@@ -1,7 +1,15 @@
 
 # LAB - CI med GitHub actions 
 
+## Mål for denne Øvingen 
+
+* Du skal bli kjent med GitHub Actions, som er helt sentralt for resten av semesteret.
+* Du vil lære hvordan GitHub Actions kan brukes til automatisk kompilering, testing og bygging av Java/Spring Boot-applikasjoner.
+* Du skal også lære å sette opp et repository for samarbeid med pull requests og beskytte hovedgrenen (main branch) for et utviklingsteam.
+
 ## Litt om eksempel-appen
+
+Dette er den samme applikasjonen som i Lab 1. Husk på at den er litt ustabil med hensikt, det er tross alt en Bank App :-)
 
 En norsk bank har brukt flere år og hundretalls milioner på å utvikle et moderne kjernesystem for bank og et "fremoverlent" API som nesten tilfredsstiller Directive (EU) 2015/2366 of the European Parliament and of the Council on Payment Services in the Internal Market, published 25 November 2016 også kjent som PSD.
 
@@ -28,8 +36,6 @@ Dere blir også kjent med Cloud 9 utviklingsmiljøet dere skal bruke videre.
 - Dere trenger en GitHub Konto
 - Lag en fork av dette repositoriet inn i egen GitHub konto
 
-![Alt text](img/fork.png  "a title")
-
 ### Sjekk ut Cloud 9 miljøet ditt i AWS og bli kjent med det
 
 ```text
@@ -49,7 +55,6 @@ emdringer.
 * Velg "Open IDE"
 
 Du må nå vente litt mens Cloud 9 starter
-@
 
 * Hvis du velger "9" ikonet på øverst til venstre i hovedmenyen vil du se "AWS Explorer". Naviger gjerne litt rundt I AWS Miljøet for å bli kjent.
 * Blir kjent med IDE, naviger rundt.
@@ -143,6 +148,7 @@ Husk at dette er applikasjonen "Shakybank", en 500 Internal server error er *sv�
 Når du ikke får noe output fra terminalen etter CURL kommandoen har requesten gått bra. 
 
 ## Lag en GitHub Actions workflow
+
 Bruk  Cloud 9 til å lage to mapper og en fil som heter ````.github/workflows/main.yml```` under rotmappen til repositoriet du har klonet.
 NB!
 Husk å trykke ctrl+s etter du har laget denne filen i cloud 9, hvis ikke vil du sjekke inn en tom fil, og din workflow vil ikke fungere
