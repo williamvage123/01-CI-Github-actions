@@ -3,7 +3,7 @@
 
 ## Mål for denne Øvingen 
 
-Øvingenr er relevant for forelesning #2 og temaet kontinuerlig integrasjon 
+Øvingen er relevant for forelesning #2 og temaet kontinuerlig integrasjon 
 
 * Du skal bli kjent med GitHub Actions, som er helt sentralt for resten av semesteret.
 * Du vil lære hvordan GitHub Actions kan brukes til automatisk kompilering, testing og bygging av Java/Spring Boot-applikasjoner.
