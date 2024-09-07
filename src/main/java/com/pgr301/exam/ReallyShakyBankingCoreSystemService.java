@@ -94,6 +94,6 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
     }
     
     private void test(){
-        printf("This is just a test.");
+        System.out.println("This is just a test.");
     }
 }
