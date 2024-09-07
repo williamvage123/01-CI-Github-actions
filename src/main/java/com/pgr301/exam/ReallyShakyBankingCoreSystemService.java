@@ -28,7 +28,7 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
     @Override
     public void transfer(Transaction tx, String fromAccount, String toAccount) {
         randomizedWait(2000);
-        randomizeExceptionOrPanic(0.7f);
+        randomizeExceptionOrPanic(0.01f);
         Account from = getOrCreateAccount(fromAccount);
         Account to = getOrCreateAccount(toAccount);
         from.setBalance(from.getBalance().subtract(valueOf(tx.getAmount())));
@@ -91,5 +91,9 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
             Thread.sleep(waitValue);
         } catch (InterruptedException e) {
         }
+    }
+    
+    private void test(){
+        print("This is just a test");
     }
 }
